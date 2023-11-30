@@ -1,0 +1,84 @@
+<div>
+    <div class="audio_pg_wrapper">
+        <div class="audio_pg_inner_wrap">
+            <div class="breadcrumb_back">
+                <ul>
+                    <li>
+                        <button mat-flat-button (click)="backtopage()"><mat-icon>keyboard_backspace</mat-icon></button>
+                    </li>
+                    <li>
+                        <div class="channel_progile">
+                            <p class="channel_logo_img"><img src="https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partner-channel/mac-logo.jpg" alt="Channel Logo" /></p>
+                            <p class="channel_name">McDonalds</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="audio_main_wrapper">
+                <div class="audio_inner_wrapper">
+                    <!-- <div class="inner_left">
+                        <div class="audio_thumbnail">
+                            <img src="https://webdevfolio.com/edreamz_projects/youtubeClone/assets/audio/audio.jpg" alt="Thumbnail" />
+                        </div>
+                    </div> -->
+                    <div class="inner_right">
+                        <div class="audio_title">
+                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                            <p class="views">101k views</p>
+                        </div>
+                        <div class="video-container">
+                            <video controls>
+                              <source [src]="videoSource" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-description">
+                            <p class="video_views"><span>16k views</span> <span class="spacer">|</span> <span>10 months ago</span></p>
+                            <p class="video_cont">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</p>
+                        </div>
+                        <div class="bottom-content">
+                            <ul class="features">
+                                <li>
+                                    <button (click)="toggleLike()" [class.liked]="likepost" data-likes="10">
+                                        <span class="likeCount">10</span>
+                                        <mat-icon class="unlike">favorite_border</mat-icon>
+                                        <mat-icon class="like">favorite</mat-icon>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button (click)="toggleCmnt()" data-likes="2">
+                                        <span class="likeCount">2</span>
+                                        <mat-icon>comment_border</mat-icon>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="company_profile"><span><img src="https://web.togethring.net/favicon.ico" alt="Togethring Logo"></span></button>
+                                </li>
+                                <li>
+                                    <button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+                                    <mat-menu #menu="matMenu" yPosition="above">
+                                        <button mat-menu-item>Report</button>
+                                        <button mat-menu-item>Settings</button>
+                                        <button mat-menu-item>Help</button>
+                                        <button mat-menu-item>Invertebrates</button>
+                                      </mat-menu>
+                                </li>
+                            </ul>
+                            
+                            <div class="add_comment_wrapper" *ngIf="showAddCmnt">
+                                <textarea id="comment" placeholder="Write a comment"></textarea>
+                                <button mat-flat-button>Add Comment</button>
+                            </div>
+                            
+                            <ul class="comments">
+                                <li>- Kishor Kumar</li>
+                                <li>- Nice song</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>

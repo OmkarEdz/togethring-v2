@@ -1,0 +1,120 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.searchBox {
+    text-align: center;
+    // padding: 2px 6px;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-right: 30px;
+    .search-field-textbox {
+      width: 250px !important;
+      font-size: 16px;
+      ::ng-deep.mat-form-field-infix{
+        padding: 0.6em 0 0.6em 0;
+        border-top: 2px solid transparent;
+      }
+      ::ng-deep.mat-form-field-prefix {
+        top: 0.5em;
+        margin-right: 5px;
+      }
+      ::ng-deep.mat-form-field-wrapper {
+        padding:0;
+        margin:0;
+      }
+      ::ng-deep.mat-icon {
+        color:#ccc;
+      }
+      @media screen and (max-width: 991px) {
+        width: 300px !important;
+      }
+      @media screen and (max-width: 768px) {
+        width: 100% !important;
+        margin-top: 10px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      order:2;
+    }
+}
+.navbar {
+  background:#fff;
+  box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 16%);
+  -webkit-box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 16%);
+  -moz-box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 16%);
+  margin-bottom: 0px;
+  z-index: 9999;
+  justify-content: space-between;
+
+  .head_lefft_wrap {
+    display: flex;
+    align-items: center;
+
+    .head_nav {
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+
+      .mat-list-item {
+        margin:0px;
+        display: flex;
+        
+        p {
+          display: flex;
+          align-items: center;
+          margin:0 30px 0 0;
+
+          .menu-text {
+            line-height: 1;
+            font-size: 16px;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        display:none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-wrap:wrap;
+    height:auto;
+    padding:10px 15px;
+  }
+}
+// .content {
+//   background-color: #191919;//#0F4C81;
+//   font-family: 'Balsamiq Sans', cursive;
+//   font-size: 40px;
+//   color: whitesmoke;
+//   display: flex; justify-content: space-between;
+// }
+
+// button {
+//   color: whitesmoke;
+//   margin-left: -1%;
+// }
+
+// ::placeholder {
+//   color: white;
+//   font-size: 30px;
+//   opacity: 0.5;
+// }
+
+// .mat-input-element {
+//   max-width: fit-content;
+// }
+.mat_btn_grp {
+  display:flex;
+
+  .searchBox {
+    @media screen and (max-width: 1024px) {
+      display:none;
+    }
+  }
+}

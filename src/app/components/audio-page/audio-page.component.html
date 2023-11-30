@@ -1,0 +1,86 @@
+<div>
+    <div class="audio_pg_wrapper">
+        <div class="audio_pg_inner_wrap">
+            <div class="breadcrumb_back">
+                <ul>
+                    <li>
+                        <button mat-flat-button (click)="backtopage()"><mat-icon>keyboard_backspace</mat-icon></button>
+                    </li>
+                    <li>
+                        <div class="channel_progile">
+                            <p class="channel_logo_img"><img src="https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partner-channel/mac-logo.jpg" alt="Channel Logo" /></p>
+                            <p class="channel_name">McDonalds</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="audio_main_wrapper">
+                <div class="audio_inner_wrapper">
+                    <!-- <div class="inner_left">
+                        <div class="audio_thumbnail">
+                            <img src="https://webdevfolio.com/edreamz_projects/youtubeClone/assets/audio/audio.jpg" alt="Thumbnail" />
+                        </div>
+                    </div> -->
+                    <div class="inner_right">
+                        <div class="audio_title">
+                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                            <p class="views">101k views</p>
+                        </div>
+                        <div class="audio_thumbnail">
+                            <img src="https://webdevfolio.com/edreamz_projects/youtubeClone/assets/audio/audio.jpg" alt="Thumbnail" />
+                        </div>
+                        <div class="audio-player">
+                            <audio #audio controls>
+                            <source src="{{ currentTrack.url }}" type="audio/mp3">
+                            Your browser does not support the audio element.
+                            </audio>
+                            <div class="controls">
+                                <button (click)="prevTrack()"><mat-icon>skip_previous</mat-icon></button>
+                                <button class="main_opt" (click)="playPause()" [class.playing]="isPlaying"><mat-icon class="play_btn">play_arrow</mat-icon><mat-icon class="pause_btn">pause</mat-icon></button>
+                                <button (click)="nextTrack()"><mat-icon>skip_next</mat-icon></button>
+                            </div>
+                            <progress [value]="progress" max="100"></progress>
+                        </div>
+                        <div class="bottom-content">
+                            <ul class="features">
+                                <li>
+                                    <button (click)="toggleLike()" [class.liked]="likepost"data-likes="10">
+                                        <span class="likeCount">10</span>
+                                        <mat-icon class="unlike">favorite_border</mat-icon>
+                                        <mat-icon class="like">favorite</mat-icon>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button (click)="toggleCmnt()"><mat-icon>comment_border</mat-icon></button>
+                                </li>
+                                <li>
+                                    <button class="company_profile"><span><img src="https://web.togethring.net/favicon.ico" alt="Togethring Logo"></span></button>
+                                </li>
+                                <li>
+                                    <button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+                                    <mat-menu #menu="matMenu" yPosition="above">
+                                        <button mat-menu-item>Report</button>
+                                        <button mat-menu-item>Settings</button>
+                                        <button mat-menu-item>Help</button>
+                                        <button mat-menu-item>Invertebrates</button>
+                                      </mat-menu>
+                                </li>
+                            </ul>
+                            
+                            <div class="add_comment_wrapper" *ngIf="showAddCmnt">
+                                <textarea id="comment" placeholder="Write a comment"></textarea>
+                                <button mat-flat-button>Add Comment</button>
+                            </div>
+                            
+                            <ul class="comments">
+                                <li>- Kishor Kumar</li>
+                                <li>- Nice song</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>

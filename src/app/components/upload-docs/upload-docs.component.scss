@@ -1,0 +1,129 @@
+.modal-window {
+    min-width: 500px;
+    .popup_head {
+        display: flex;
+        align-items: center;
+        padding-bottom:20px;
+        
+        .popup_actions {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+
+            .popup_heading {
+                margin-bottom: 0px;
+                font-weight: 600;
+            }
+
+            button {
+                padding:0px 8px;
+                min-width: 35px;
+                margin-right:-8px;
+                text-align: right;
+
+                @media screen and (max-width: 600px) {
+                    padding:0px 5px;
+                    min-width: 30px;
+                }
+    
+                ::ng-deep .mat-icon {
+                    @media screen and (max-width: 600px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            @media screen and (max-width: 600px) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .mat-dialog-content {
+        .uploadImg {
+            border: 2px dashed #d3222c;
+            border-radius: 20px;
+            margin: 0 0 30px;
+            padding: 30px 50px 40px;
+            text-align: center;
+            position: relative;
+
+            mat-label {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 22px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 18px;
+                }
+            }
+
+            .mat-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 60px;
+
+                @media screen and (max-width: 768px) {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 40px;
+                }
+            }
+
+            .mat-input-element {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                filter: opacity(0.0);
+            }
+
+            .selectedFile {
+                p {
+                    margin: 10px 0px 0px;
+                    font-size: 16px;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                padding: 30px 20px 40px;
+            }
+        }
+
+        .buttons_wrap {
+            display: flex;
+            justify-content: center;
+
+            button {
+                margin: 0 10px 10px;
+            }
+
+            .cancel_btn {
+                background-color: #0000000a;
+                border: 1px solid #0000000a;
+                &:hover {
+                   background-color: #fff;
+                }
+             }
+             .upload_btn {
+                margin-left: 20px;
+                background-color: #d3222c;
+                color: #fff;
+                border: 1px solid #d3222c;
+                transition: 0.5s all;
+                &:hover {
+                   background-color: #fff;
+                   color: #d3222c;
+                   border: 1px solid #d3222c;  
+                }
+             }
+        }
+    }
+    
+    @media screen and (max-width: 1200px) {
+        min-width: auto;
+    }
+}

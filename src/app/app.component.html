@@ -1,0 +1,13 @@
+<mat-progress-bar *ngIf="showProgressBar" mode="indeterminate" color="warn"></mat-progress-bar>
+<app-nav-bar (changeState)="changeState($event)"></app-nav-bar>
+<router-outlet></router-outlet>
+<app-bottom-navigation></app-bottom-navigation>
+<!-- <mat-sidenav-container (changeProgressState)="changeProgressState($event)" autosize>
+  <mat-sidenav-content [style.marginLeft]="widthSideBar">
+    <app-import-button-comp></app-import-button-comp>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+  <mat-sidenav #sidenav mode="side" opened [style.width]="widthSideBar" [ngClass]="{'collpsed-menu': opened === false}">
+    <app-side-bar></app-side-bar>
+  </mat-sidenav>
+</mat-sidenav-container> -->

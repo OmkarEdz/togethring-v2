@@ -1,0 +1,43 @@
+<div>
+    <div class="audio_pg_wrapper">
+        <div class="audio_pg_inner_wrap">
+            <div class="breadcrumb_back">
+                <ul>
+                    <li>
+                        <button mat-flat-button (click)="backtopage()"><mat-icon>keyboard_backspace</mat-icon></button>
+                    </li>
+                    <li>
+                        <div class="channel_progile">
+                            <p class="channel_logo_img"><img src="https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partner-channel/mac-logo.jpg" alt="Channel Logo" /></p>
+                            <p class="channel_name">McDonalds</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="audio_main_wrapper">
+                <div class="audio_inner_wrapper">
+                    <div class="inner_right">
+                        <div class="audio_title">
+                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                            <p class="views">8 items</p>
+                        </div>
+                        <ul class="video_list_wrapper">
+                            <li *ngFor="let video of videos">
+                                <div class="thumbnail_wrapper" [routerLink]="['/video-page']">
+                                    <img src="{{ video.thumbnail }}" alt="Thumbnail" />
+                                    <span class="duration">{{ video.duration }}</span>
+                                </div>
+                                <div class="item_detail_wrapper" [routerLink]="['/video-page']">
+                                    <h5 class="item_title">{{ video.videotitle }}</h5>
+                                    <p class="item_desc">{{ video.videodesc }}</p>
+                                    <p class="posted"><span>{{ video.views }}</span> <span class="side_spacing">|</span> <span>{{ video.postedby }}</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>

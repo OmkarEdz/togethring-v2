@@ -1,0 +1,22 @@
+<div class="modal-window">
+    <div class="popup_head">
+        <div class="popup_actions">
+          <h3 class="popup_heading">Upload Image</h3>
+          <button class="close_btn" mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
+        </div>
+    </div>
+    <mat-dialog-content>
+        <div class="uploadImg">
+            <mat-icon matSuffix>cloud_upload</mat-icon>
+            <mat-label>Drag & Drop or Click to Upload</mat-label>
+            <input type="file" matInput (change)="onFileSelected($event)" accept="image/png, image/jpg, image/jpeg, image/webp" />
+            <div *ngIf="selectedFile" class="selectedFile">
+                <p>Selected File: {{ selectedFile.name }}</p>
+            </div>
+        </div>
+        <div class="buttons_wrap">
+            <button class="cancel_btn" mat-raised-button mat-dialog-close>Cancel</button>
+            <button class="upload_btn" mat-raised-button (click)="uploadImage()">Upload</button>
+        </div>
+    </mat-dialog-content>
+</div>

@@ -1,0 +1,23 @@
+<div class="modal-window">
+    <div class="popup_head">
+        <div class="popup_actions">
+          <h3 class="popup_heading">Upload Photo</h3>
+          <button class="close_btn" mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
+        </div>
+    </div>
+    <mat-dialog-content>
+        <div>
+            <webcam
+              #webcam
+              [trigger]="showWebcam"
+              (imageCapture)="handleImage($event)"
+            ></webcam>
+          </div>
+          
+          <div class="buttons_wrap">
+            <button mat-raised-button mat-raised-button mat-dialog-close>Cancel</button>
+            <button mat-raised-button class="upload_btn" (click)="onCapture()">Capture</button>
+          </div>
+    </mat-dialog-content>
+</div>
+

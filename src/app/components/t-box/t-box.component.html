@@ -1,0 +1,68 @@
+<div>
+    <div class="banner_tbox slider">
+        <div *ngFor="let slide of slides" class="slide">
+          <img [src]="slide" alt="Slide Image">
+        </div>
+      </div>
+    <div class="t-box-inner">
+        <div class="start_tog_wrap">
+            <h2>Start togeth૪ing with</h2>
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" class="start_icon" (click)="openDialogImage()">
+                        <mat-icon>image</mat-icon>
+                        <span>Photo</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="javascript:void(0)" class="start_icon" (click)="openDialogVideo()">
+                        <mat-icon>ondemand_video</mat-icon>
+                        <span>Video</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="javascript:void(0)" class="start_icon" (click)="openDialogAudio()">
+                        <mat-icon>audiotrack</mat-icon>
+                        <span>Audio</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="javascript:void(0)" class="start_icon" (click)="openDialogDocs()">
+                        <mat-icon>description</mat-icon>
+                        <span>Docs</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="javascript:void(0)" class="start_icon" (click)="openDialogCamera()">
+                        <mat-icon>camera</mat-icon>
+                        <span>Camera</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="partnersWrap">
+            <h2>Partners</h2>
+            <ul class="partner_items">
+                <li *ngFor="let item of items">
+                    <a href="{{ item.pagelink}}" class="partner_item">
+                        <img src="{{ item.imgsrc }}" alt="{{ item.imgtitle}}" />
+                    </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="partnersWrap channelsWrap">
+            <h2>Channels</h2>
+            <ul class="partner_items channels_items">
+                <li *ngFor="let item of channels">
+                    <a href="{{ item.pagelink}}" class="partner_item">
+                        <img src="{{ item.imgsrc }}" alt="{{ item.imgtitle}}" />
+                    </a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+.modal-window {
+    min-width: 500px;
+    .popup_head {
+        display: flex;
+        align-items: center;
+        padding-bottom:20px;
+        
+        .popup_actions {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+
+            .popup_heading {
+                margin-bottom: 0px;
+                font-weight: 600;
+            }
+
+            button {
+                padding:0px 8px;
+                min-width: 35px;
+                margin-right:-8px;
+                text-align: right;
+
+                @media screen and (max-width: 600px) {
+                    padding:0px 5px;
+                    min-width: 30px;
+                }
+    
+                ::ng-deep .mat-icon {
+                    @media screen and (max-width: 600px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            @media screen and (max-width: 600px) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .mat-dialog-content {
+        video {
+            @media screen and (max-width: 991px) {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+
+        .buttons_wrap {
+            display: flex;
+            justify-content: center;
+            margin-top:30px;
+
+            button {
+                margin: 0 10px 10px;
+            }
+
+            .cancel_btn {
+                background-color: #0000000a;
+                border: 1px solid #0000000a;
+                &:hover {
+                   background-color: #fff;
+                }
+             }
+             .upload_btn {
+                margin-left: 20px;
+                background-color: #d3222c;
+                color: #fff;
+                border: 1px solid #d3222c;
+                transition: 0.5s all;
+                &:hover {
+                   background-color: #fff;
+                   color: #d3222c;
+                   border: 1px solid #d3222c;  
+                }
+             }
+        }
+    }
+    
+    @media screen and (max-width: 1200px) {
+        min-width: auto;
+    }
+}

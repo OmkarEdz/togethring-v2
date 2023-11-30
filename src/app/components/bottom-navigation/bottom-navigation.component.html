@@ -1,0 +1,8 @@
+<div class="bot_nav_wrapper">
+    <mat-list-item *ngFor="let d of data" class="sidenav-item" (click)="router(d.path)">
+        <p>
+            <mat-icon>{{ d.icon }}</mat-icon>
+            <span class="menu-text">{{ d.desc }}</span>
+        </p>
+    </mat-list-item>
+</div>

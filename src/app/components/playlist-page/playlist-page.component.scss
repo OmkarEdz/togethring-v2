@@ -1,0 +1,299 @@
+.audio_pg_wrapper {
+    padding: 0em 12px;
+    margin:auto;
+
+    .audio_pg_inner_wrap {
+        background: rgb(247,247,247);
+        background: linear-gradient(45deg, rgba(247,247,247,1) 0%, rgba(255,255,255,1) 50%, rgba(247,247,247,1) 100%);
+    
+
+        .breadcrumb_back {
+            padding: 2em;
+            border-bottom: 1px solid #ccc;
+
+            ul {
+                display: flex;
+                margin:0;
+                padding: 0;
+                align-items: center;
+
+                li {
+                    list-style: none;
+
+                    button {
+                        margin: 0px 30px 0px 0px;
+                        padding: 0;
+                        box-shadow:unset;
+                        min-width: unset; 
+                        background-color:unset !important;
+
+                        .mat-icon {
+                            font-size: 30px;
+                            width: 30px;
+                            height: 30px;
+
+                            @media screen and (max-width: 576px){
+                                font-size: 25px;
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+
+                        @media screen and (max-width: 576px){
+                            margin: 0px 20px 0px 0px;
+                        }
+                    }
+
+                    .channel_progile {
+                        display: flex;
+                        align-items: center;
+
+                        .channel_logo_img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            margin:0px 20px 0px 0px;
+
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                                height: 100%;
+                            }
+
+                            @media screen and (max-width: 576px){
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+
+                        .channel_name {
+                            font-size: 1.6em;
+                            font-weight: bold;
+                            font-family: 'Outfit', sans-serif;
+                            margin:0px;
+                            @media screen and (max-width: 991px) {
+                                font-size: 20px;
+                                line-height: 1.5;
+                            }
+                            @media screen and (max-width: 430px) {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px){
+                padding: 1em;
+            }
+        }
+
+        .audio_main_wrapper {
+            padding: 2em;
+
+            .audio_inner_wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .inner_right {
+                    width: 100%;
+
+                    .audio_title {
+                        display: flex;
+                        margin-bottom: 50px;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        h2 {
+                            font-size: 1.6em;
+                            font-weight: bold;
+                            font-family: 'Outfit', sans-serif;
+                            margin:0px;
+                            max-width: 80%;
+                            @media screen and (max-width: 991px) {
+                                font-size: 20px;
+                                max-width: 75%;
+                            }
+                            @media screen and (max-width: 768px) {
+                                font-size: 16px;
+                                line-height: 1.5;
+                            }
+                        }
+
+                        .views {
+                            margin: 0px;
+                            background: #d3222c;
+                            padding: 8px 10px;
+                            color: #fff;
+                            line-height: 1;
+                            border-radius: 5px;
+
+                            @media screen and (max-width: 768px){
+                                font-size: 12px;
+                            }
+                        }
+                        
+                        @media screen and (max-width: 768px){
+                            margin-bottom: 30px;
+                        }
+                    }
+
+                    .video_list_wrapper {
+                        padding: 0;
+                        margin: 0 -10px 20px;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        list-style: none;
+                        flex-wrap: wrap;
+                        
+                        li {
+                            width: calc(33.33% - 20px);
+                            height: unset;
+                            margin: 10px 10px 30px; 
+        
+                            .thumbnail_wrapper {
+                                position: relative;
+                                padding-bottom: 56.66%;
+                                border-radius: 20px;
+                                overflow: hidden;
+                                margin-bottom: 20px;
+                                cursor: pointer;
+        
+                                img {
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+        
+                                .duration {
+                                    position: absolute;
+                                    bottom: 10px;
+                                    right: 10px;
+                                    z-index: 9;
+                                    background: #fff;
+                                    padding: 5px;
+                                    font-size: 12px;
+                                    color: #000;
+                                    line-height: 1;
+                                    border-radius: 5px;
+        
+                                    @media screen and (max-width:768px) {
+                                        font-size: 10px;
+                                    }
+                                }
+        
+                                @media screen and (max-width:768px) {
+                                    width: 30%;
+                                    padding-bottom: 22%;
+                                    margin: 0px;
+                                    border-radius: 15px;
+                                }
+                            }
+        
+                            .item_detail_wrapper {
+                                cursor: pointer;
+                                .item_title {
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    margin-bottom: 10px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+        
+                                    @media screen and (max-width:768px) {
+                                        font-size: 16px;
+                                        margin-bottom: 5px;
+                                    }
+        
+                                    @media screen and (max-width:580px) {
+                                        font-size: 14px;
+                                    }
+                                }
+        
+                                .item_desc {
+                                    margin-bottom: 5px;
+                                    color: #000;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 3;
+                                    -webkit-box-orient: vertical;
+        
+                                    @media screen and (max-width:768px) {
+                                        font-size: 12px;
+                                        line-height: 1.5;
+                                        -webkit-line-clamp: 2;
+                                    }
+                                }
+        
+                                .posted {
+                                    margin: 0px;
+                                    font-size: 12px;
+                                    color: #444;
+        
+                                    .side_spacing {
+                                        padding: 0px 5px;
+                                    }
+                                }
+        
+                                @media screen and (max-width:768px) {
+                                    width: 67%;
+                                }
+                            }
+        
+                            @media screen and (max-width:768px) {
+                                width: calc(100% - 20px);
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                                margin:10px;
+                            }
+                        }
+        
+                        @media screen and (max-width: 768px) {
+                           margin: -10px -10px 10px;
+                           padding-bottom: 10px;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px){
+                padding: 1em;
+            }
+        }
+    }
+
+    @media screen and (min-width: 576px){
+        max-width: 540px;
+    }
+
+    @media screen and (min-width: 768px){
+        max-width: 720px;
+    }
+    
+    @media screen and (min-width: 992px){
+        max-width: 960px;
+    }
+    
+    @media screen and (min-width: 1200px){
+        max-width: 1140px;
+    }
+
+    @media screen and (max-width:768px) {
+        padding-bottom: 65px;
+    }
+
+    @media screen and (max-width:576px) {
+        padding: 0 0 65px;
+        max-width: 100%;
+    }
+}

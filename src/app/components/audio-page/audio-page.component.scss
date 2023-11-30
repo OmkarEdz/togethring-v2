@@ -1,0 +1,439 @@
+.audio_pg_wrapper {
+    padding: 0em 12px;
+    margin:auto;
+
+    .audio_pg_inner_wrap {
+        background: rgb(247,247,247);
+        background: linear-gradient(45deg, rgba(247,247,247,1) 0%, rgba(255,255,255,1) 50%, rgba(247,247,247,1) 100%);
+    
+
+        .breadcrumb_back {
+            padding: 2em;
+            border-bottom: 1px solid #ccc;
+
+            ul {
+                display: flex;
+                margin:0;
+                padding: 0;
+                align-items: center;
+
+                li {
+                    list-style: none;
+
+                    button {
+                        margin: 0px 30px 0px 0px;
+                        padding: 0;
+                        box-shadow:unset;
+                        min-width: unset; 
+                        background-color:unset !important;
+
+                        .mat-icon {
+                            font-size: 30px;
+                            width: 30px;
+                            height: 30px;
+
+                            @media screen and (max-width: 576px){
+                                font-size: 25px;
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+
+                        @media screen and (max-width: 576px){
+                            margin: 0px 20px 0px 0px;
+                        }
+                    }
+
+                    .channel_progile {
+                        display: flex;
+                        align-items: center;
+
+                        .channel_logo_img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            margin:0px 20px 0px 0px;
+
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                                height: 100%;
+                            }
+
+                            @media screen and (max-width: 576px){
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+
+                        .channel_name {
+                            font-size: 1.6em;
+                            font-weight: bold;
+                            font-family: 'Outfit', sans-serif;
+                            margin:0px;
+                            @media screen and (max-width: 991px) {
+                                font-size: 20px;
+                                line-height: 1.5;
+                            }
+                            @media screen and (max-width: 430px) {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px){
+                padding: 1em;
+            }
+        }
+
+        .audio_main_wrapper {
+            padding: 2em;
+
+            .audio_inner_wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .inner_left {
+                    width: 40%;
+
+                    .audio_thumbnail {
+                        border-radius: 30px;
+                        overflow: hidden;
+                        line-height: 1;
+
+                        img {
+                            width: 100%;
+                            height:100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    @media screen and (max-width:768px) {
+                        display: none;
+                    }
+                }
+
+                .inner_right {
+                    width: 100%;
+                    
+                    .audio_title {
+                        display: flex;
+                        margin-bottom: 50px;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        h2 {
+                            font-size: 1.6em;
+                            font-weight: bold;
+                            font-family: 'Outfit', sans-serif;
+                            margin:0px;
+                            max-width: 80%;
+                            @media screen and (max-width: 991px) {
+                                font-size: 20px;
+                                max-width: 75%;
+                            }
+                            @media screen and (max-width: 768px) {
+                                font-size: 16px;
+                                line-height: 1.5;
+                            }
+                        }
+
+                        .views {
+                            margin: 0px;
+                            background: #d3222c;
+                            padding: 8px 10px;
+                            color: #fff;
+                            line-height: 1;
+                            border-radius: 5px;
+
+                            @media screen and (max-width: 768px){
+                                font-size: 12px;
+                            }
+                        }
+                        
+                        @media screen and (max-width: 768px){
+                            margin-bottom: 30px;
+                        }
+                    }
+
+                    .audio_thumbnail {
+                        width: 60%;
+                        margin: 30px auto;
+                        border-radius: 50px;
+                        overflow: hidden;
+                        line-height: 0;
+
+                        img {
+                            width: 100%;
+                            height:100%;
+                            object-fit: cover;
+                        }
+                        
+                        @media screen and (max-width: 768px){
+                            width: 90%;
+                            border-radius: 30px;
+                        }
+                    }
+
+                    .audio-player {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        audio {
+                            width: 0;
+                            height: 0;
+                            visibility: hidden;
+                            opacity: 0;
+                        }
+
+                        .controls {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 30px;
+
+                            button {
+                                background: no-repeat;
+                                border: none;
+                                padding: 0;
+                                margin: 0px 15px;
+                                cursor: pointer;
+
+                                .mat-icon {
+                                    height: 40px;
+                                    width: 40px;
+                                    font-size: 40px;
+
+                                    @media screen and (max-width: 768px){
+                                        height: 30px;
+                                        width: 30px;
+                                        font-size: 30px;
+                                    }
+                                }
+
+                                @media screen and (max-width: 768px){
+                                    margin: 0px 10px;
+                                }
+                            }
+
+                            .main_opt {
+                                background: #d3222c;
+                                padding: 10px;
+                                border-radius: 50%;
+                                line-height: 0;
+
+                                .mat-icon {
+                                    color:#fff;
+                                }
+
+                                .play_btn  {
+                                    display:none;
+                                }
+                            }
+
+                            .playing {
+                                .play_btn  {
+                                    display:block;
+                                }
+                                .pause_btn   {
+                                    display:none;
+                                }
+                            }
+                        }
+                        
+                        progress {
+                            width: 60%;
+                        
+                            @media screen and (max-width: 768px){
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .bottom-content {
+                        width: 60%;
+                        margin: auto;
+
+                        .features {
+                            display: flex;
+                            list-style: none;
+                            padding: 15px;
+                            background: #efefef;
+                            margin: 30px 0px 0px;
+                            border-radius: 10px;
+                            justify-content: space-around;
+
+                            li {
+                                margin: 0px 10px;
+                                flex: 1;
+                                text-align: center;     
+                                line-height: 0;
+
+                                button {
+                                    background: no-repeat;
+                                    border: none;
+                                    padding: 0;
+                                    margin: 0px;
+                                    cursor: pointer;
+                                    line-height: 0;
+                                    position: relative;
+                                    
+                                    .likeCount {
+                                        position: absolute;
+                                        top: 5px;
+                                        line-height: 1;
+                                        font-size: 20px;
+                                        font-weight: 600;
+                                        right: 40px;
+
+                                        @media screen and (max-width: 768px){
+                                            font-size: 16px;
+                                            right: 30px;
+                                        }
+                                    }
+
+                                    .mat-icon {
+                                        height: 30px;
+                                        width: 30px;
+                                        font-size: 30px;
+
+                                        @media screen and (max-width: 768px){
+                                            height: 25px;
+                                            width: 25px;
+                                            font-size: 25px;
+                                        }
+                                    }
+
+                                    .like {
+                                        display:none;
+                                    }
+                                }
+
+                                .liked {
+                                    .like {
+                                        display:block;
+                                        color:#d3222c;
+                                    }
+                                    .unlike {
+                                        display:none;
+                                    }
+                                }
+
+                                .company_profile {
+                                    span {
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 50%;
+                                        overflow: hidden;
+                                        display: block;
+
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                        
+                                        @media screen and (max-width: 768px){
+                                            width: 25px;
+                                            height: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .add_comment_wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            margin: 15px 0px;
+
+                            #comment {
+                                width: -webkit-fill-available;
+                                padding: 10px;
+                                border: 1px solid #efefef;
+                                background: #efefef;
+                                border-radius: 10px;
+                                min-height: 60px;
+                                font-size: 16px;
+
+                                &:focus {
+                                    outline:0px !important;
+                                }
+
+                                @media screen and (max-width: 768px){
+                                    font-size: 14px;
+                                }
+                            }
+
+                            button {
+                                background: #d3222c;
+                                color: #fff;
+                                margin-top: 10px;
+                            }
+                        }
+
+                        .comments {
+                            margin: 0px;
+                            padding: 0px;
+                            list-style: none;
+                            
+                            li {
+                                padding: 15px;
+                                background: #efefef;
+                                border-radius: 10px;
+                                margin: 15px 0px;
+                                font-size: 16px;
+                                font-weight: 500;
+                        
+                                @media screen and (max-width: 768px){
+                                    width: calc(100% - 30px);
+                                    font-size: 14px;
+                                    padding: 10px 15px;
+                                }
+                            }
+                        }
+                        
+                        @media screen and (max-width: 768px){
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px){
+                padding: 1em;
+            }
+        }
+    }
+
+    @media screen and (min-width: 576px){
+        max-width: 540px;
+    }
+
+    @media screen and (min-width: 768px){
+        max-width: 720px;
+    }
+    
+    @media screen and (min-width: 992px){
+        max-width: 960px;
+    }
+    
+    @media screen and (min-width: 1200px){
+        max-width: 1140px;
+    }
+
+    @media screen and (max-width:768px) {
+        padding-bottom: 65px;
+    }
+
+    @media screen and (max-width:576px) {
+        padding: 0 0 65px;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,184 @@
+<div>
+    <div class="banner_tbox">
+        <img src="https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partner-channel/partner-channel-banner.png" alt="Partner Banner" />
+    </div>
+    <div class="partner_inner_wrap">
+        <div class="partner_profile_wrap">
+            <div class="profile_logo_wrap">
+                <p class="profile_logo"><img src="https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partner-channel/mac-logo.jpg" alt="Partner Logo" /></p>
+                <div class="profile_name_wrap">
+                    <h2 class="profile_name">McDonalds</h2>
+                </div>
+            </div>
+            <div class="profile_details_wrap">
+                <div class="profile_name_wrap only_for_mobile">
+                    <h2 class="profile_name">McDonalds</h2>
+                </div>
+                <div class="profile_followers">
+                    <ul>
+                        <li class="followers">
+                            <span>600</span>
+                            Followers
+                        </li>
+                        <li class="followers">
+                            <span>99</span>
+                            Following
+                        </li>
+                    </ul>
+                </div>
+                <button mat-flat-button class="follow_btn" (click)="toggleButtonText()">{{ buttonText }}</button>
+                <div class="become_member_wrapper">
+                    <a href="javascript:void(0)">Become a member</a>
+                </div>
+            </div>
+        </div>
+        <mat-tab-group animationDuration="0ms" class="partner_tabbing_wrap">
+            <mat-tab label="Home">
+                <div class="home_tab_wrapper">
+                    <div class="uploads_wrapper">
+                        <h2>Uploads</h2>
+                        <ul class="video_list_wrapper">
+                            <li *ngFor="let video of videos.slice(0, 3);">
+                                <div class="thumbnail_wrapper" [routerLink]="['/video-page']">
+                                    <img src="{{ video.thumbnail }}" alt="Thumbnail" />
+                                    <span class="duration">{{ video.duration }}</span>
+                                </div>
+                                <div class="item_detail_wrapper" [routerLink]="['/video-page']">
+                                    <h5 class="item_title">{{ video.videotitle }}</h5>
+                                    <p class="item_desc">{{ video.videodesc }}</p>
+                                    <p class="posted"><span>{{ video.views }}</span> <span class="side_spacing">|</span> <span>{{ video.postedby }}</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> 
+                    <div class="uploads_wrapper">
+                        <h2>Created playlist</h2>
+                        <ul class="playlist_item_wrapper">
+                            <li *ngFor="let playlist of playlists.slice(0, 3);">
+                                <div class="thumbnail_wrapper" [routerLink]="['/playlist-page']">
+                                    <img src="{{ playlist.thumbnail }}" alt="Thumbnail" />
+                                    <p class="videos_count"><span>{{ playlist.videoscount }} <mat-icon>playlist_play</mat-icon></span></p>
+                                </div>
+                                <div class="item_detail_wrapper" [routerLink]="['/playlist-page']">
+                                    <h5 class="item_title">{{ playlist.playlisttitle }}</h5>
+                                    <p class="item_desc">{{ playlist.playlistdesc }}</p>
+                                    <p class="posted"><span>{{ playlist.postedby }}</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+            </mat-tab>
+            <mat-tab label="Featured Channels">
+                <div class="feature_tab">
+                    <h2>Featured Channels</h2>
+                    <ul class="feature_channels_list">
+                        <li *ngFor="let featuredChannel of featuredChannels">
+                            <a href="{{ featuredChannel.link }}" class="channelImage">
+                                <img src="{{ featuredChannel.imgsrc }}" alt="{{ featuredChannel.imgtitle }}" />
+                            </a>
+                            <a href="{{ featuredChannel.link }}" class="channelName">{{ featuredChannel.channelName }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </mat-tab>
+            <mat-tab label="Images">
+                <div class="images_wrap">
+                    <h2>Images</h2>
+                    <ul class="image_list">
+                        <li *ngFor="let slide of slides" [routerLink]="['/image-page']">
+                            <button mat-flat-button href="javascript:void(0)" class="image_item">
+                                <img src="{{ slide.imgsrc }}" alt="{{ slide.imgtitle}}" />
+                            </button> 
+                        </li>
+                    </ul>
+                </div>
+            </mat-tab>
+            <mat-tab label="Audio">
+                <div class="video_wrapper">
+                    <h2>Audios</h2>
+                    <ul class="video_list_wrapper">
+                        <li *ngFor="let audio of audios">
+                            <div class="thumbnail_wrapper" [routerLink]="['/audio-page']">
+                                <img src="{{ audio.thumbnail }}" alt="Thumbnail" />
+                                <span class="duration">{{ audio.duration }}</span>
+                            </div>
+                            <div class="item_detail_wrapper" [routerLink]="['/audio-page']">
+                                <h5 class="item_title">{{ audio.audiotitle }}</h5>
+                                <p class="item_desc">{{ audio.audiodesc }}</p>
+                                <p class="posted"><span>{{ audio.views }}</span> <span class="side_spacing">|</span> <span>{{ audio.postedby }}</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </mat-tab>
+            <mat-tab label="Video">
+                <div class="video_wrapper">
+                    <h2>Videos</h2>
+                    <ul class="video_list_wrapper">
+                        <li *ngFor="let video of videos">
+                            <div class="thumbnail_wrapper" [routerLink]="['/video-page']">
+                                <img src="{{ video.thumbnail }}" alt="Thumbnail" />
+                                <span class="duration">{{ video.duration }}</span>
+                            </div>
+                            <div class="item_detail_wrapper" [routerLink]="['/video-page']">
+                                <h5 class="item_title">{{ video.videotitle }}</h5>
+                                <p class="item_desc">{{ video.videodesc }}</p>
+                                <p class="posted"><span>{{ video.views }}</span> <span class="side_spacing">|</span> <span>{{ video.postedby }}</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </mat-tab>
+            <mat-tab label="Books">
+                <div class="video_wrapper">
+                    <h2>Books</h2>
+                    <ul class="video_list_wrapper">
+                        <li *ngFor="let book of books">
+                            <div class="thumbnail_wrapper" [routerLink]="['/book-page']">
+                                <img src="{{ book.thumbnail }}" alt="Thumbnail" />
+                            </div>
+                            <div class="item_detail_wrapper" [routerLink]="['/book-page']">
+                                <h5 class="item_title">{{ book.booktitle }}</h5>
+                                <p class="item_desc">{{ book.bookdesc }}</p>
+                                <p class="posted"><span>{{ book.pagecount  }} pages</span> <span class="side_spacing">|</span> <span>{{ book.views }}</span> <span class="side_spacing">|</span> <span>{{ book.postedby }}</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </mat-tab>
+            <mat-tab label="Playlist">
+                <div class="playlist_wrapper">
+                    <h2>Playlist</h2>
+                    <ul class="playlist_item_wrapper">
+                        <li *ngFor="let playlist of playlists">
+                            <div class="thumbnail_wrapper" [routerLink]="['/playlist-page']">
+                                <img src="{{ playlist.thumbnail }}" alt="Thumbnail" />
+                                <p class="videos_count"><span>{{ playlist.videoscount }} <mat-icon>playlist_play</mat-icon></span></p>
+                            </div>
+                            <div class="item_detail_wrapper" [routerLink]="['/playlist-page']">
+                                <h5 class="item_title">{{ playlist.playlisttitle }}</h5>
+                                <p class="item_desc">{{ playlist.playlistdesc }}</p>
+                                <p class="posted"><span>{{ playlist.postedby }}</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </mat-tab>
+            <mat-tab label="About">
+                <div class="about-tab-wrap">
+                    <h2>About</h2>
+                    <div class="about_item">
+                        <h4>Description</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <div class="about_item">
+                        <h4>More info</h4>
+                        <p>Country: <span>India</span></p>
+                        <p>Created at: <span>Now 02, 2022</span></p>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
