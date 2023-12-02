@@ -1048,7 +1048,7 @@
     }
 
     .partner_tabbing_wrap{
-        .mat-tab-header {
+        ::ng-deep .mat-tab-header {
             button {
                 .mat-tab-header-pagination-chevron {
                     @media screen and (max-width:768px) {
@@ -1072,6 +1072,22 @@
             }
             @media screen and (max-width:768px) {
                 align-items: center;
+            }
+
+            .mat-tab-header-pagination-before {
+                .mat-tab-header-pagination-chevron {
+                    @media screen and (max-width:768px) {
+                        margin-right: -3px;
+                    }
+                }
+            }
+
+            .mat-tab-header-pagination-after {
+                .mat-tab-header-pagination-chevron {
+                    @media screen and (max-width:768px) {
+                        margin-left: -3px;
+                    }
+                }
             }
         }
     }

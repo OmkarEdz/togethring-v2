@@ -29,7 +29,9 @@ export class TBoxComponent implements OnInit, AfterViewInit {
     this.dialog.open(UploadDocsComponent);
   }
   openDialogCamera() {
-    this.dialog.open(UploadCameraComponent);
+    this.dialog.open(UploadCameraComponent, {
+      panelClass: 'custom-dialog-container-full-width-camera', 
+    });
   }
 
   items = [

@@ -32,8 +32,8 @@
                 </div>
             </div>
         </div>
-        <mat-tab-group animationDuration="0ms" class="partner_tabbing_wrap">
-            <mat-tab label="Home">
+        <mat-tab-group animationDuration="0ms" class="partner_tabbing_wrap" style='min-height:500px'>
+            <mat-tab (click)="tabClick($event)" label="Home">
                 <div class="home_tab_wrapper">
                     <div class="uploads_wrapper">
                         <h2>Uploads</h2>
@@ -69,7 +69,7 @@
                     </div> 
                 </div>
             </mat-tab>
-            <mat-tab label="Featured Channels">
+            <mat-tab (click)="tabClick($event)" label="Featured Channels">
                 <div class="feature_tab">
                     <h2>Featured Channels</h2>
                     <ul class="feature_channels_list">
@@ -82,7 +82,7 @@
                     </ul>
                 </div>
             </mat-tab>
-            <mat-tab label="Images">
+            <mat-tab (click)="tabClick($event)" label="Images">
                 <div class="images_wrap">
                     <h2>Images</h2>
                     <ul class="image_list">
@@ -94,7 +94,7 @@
                     </ul>
                 </div>
             </mat-tab>
-            <mat-tab label="Audio">
+            <mat-tab (click)="tabClick($event)" label="Audio">
                 <div class="video_wrapper">
                     <h2>Audios</h2>
                     <ul class="video_list_wrapper">
@@ -112,7 +112,7 @@
                     </ul>
                 </div>
             </mat-tab>
-            <mat-tab label="Video">
+            <mat-tab (click)="tabClick($event)" label="Video">
                 <div class="video_wrapper">
                     <h2>Videos</h2>
                     <ul class="video_list_wrapper">
@@ -130,7 +130,7 @@
                     </ul>
                 </div>
             </mat-tab>
-            <mat-tab label="Books">
+            <mat-tab (click)="tabClick($event)" label="Books">
                 <div class="video_wrapper">
                     <h2>Books</h2>
                     <ul class="video_list_wrapper">
@@ -147,7 +147,7 @@
                     </ul>
                 </div>
             </mat-tab>
-            <mat-tab label="Playlist">
+            <mat-tab (click)="tabClick($event)" label="Playlist">
                 <div class="playlist_wrapper">
                     <h2>Playlist</h2>
                     <ul class="playlist_item_wrapper">
@@ -165,7 +165,7 @@
                     </ul>
                 </div>
             </mat-tab>
-            <mat-tab label="About">
+            <mat-tab (click)="tabClick($event)" label="About">
                 <div class="about-tab-wrap">
                     <h2>About</h2>
                     <div class="about_item">

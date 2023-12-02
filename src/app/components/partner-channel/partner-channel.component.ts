@@ -103,6 +103,11 @@ export class PartnerChannelComponent implements OnInit {
   /* code for Books tab end here */
 
 
+  tabClick(event: Event): void {
+    event.preventDefault();
+    // Your tab click logic here
+  }
+
   ngOnInit(): void {
   }
 
