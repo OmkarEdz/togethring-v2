@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewEncapsulation  } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { UploadImageComponent } from '../upload-image/upload-image.component';
 import { UploadVideoComponent } from '../upload-video/upload-video.component';
 import { UploadAudioComponent } from '../upload-audio/upload-audio.component';

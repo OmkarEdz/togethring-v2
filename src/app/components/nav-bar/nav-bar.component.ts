@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 // import { AngularFireAuth } from '@angular/fire/auth';
