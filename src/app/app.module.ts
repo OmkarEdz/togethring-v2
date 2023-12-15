@@ -55,72 +55,70 @@ import { ImagePageComponent } from './components/image-page/image-page.component
 import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavBarComponent,
-    LogoComponent,
-    TBoxComponent,
-    PartnerChannelComponent,
-    ImageDialogComponent,
-    UploadImageComponent,
-    UploadVideoComponent,
-    UploadAudioComponent,
-    UploadDocsComponent,
-    UploadCameraComponent,
-    AudioPageComponent,
-    BookPageComponent,
-    PlaylistPageComponent,
-    VideoPageComponent,
-    ImagePageComponent,
-    BottomNavigationComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    //Material
-    MatSnackBarModule,
-    MatTabsModule,
-    MatTooltipModule,
-    //AngularFireModule.initializeApp(environment.firebase),
-    //AngularFireAuthModule,
-    MatToolbarModule,
-    MatProgressBarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatDialogModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatTabsModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatSelectModule,
-    MatListModule,
-    MatCardModule,
-    MatButtonToggleModule,
-    MatGridListModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatTableModule,
-    MatChipsModule,
-    MatSortModule,
-    ChartModule,
-    MatPaginatorModule,
-    WebcamModule,
-    // ServiceWorkerModule.register('ngsw-worker.js', {
-    //   enabled: environment.production,
-    //   // Register the ServiceWorker as soon as the app is stable
-    //   // or after 30 seconds (whichever comes first).
-    //   registrationStrategy: 'registerWhenStable:30000'
-    // })
-  ],
-
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [ImageDialogComponent]
+    declarations: [
+        AppComponent,
+        NavBarComponent,
+        LogoComponent,
+        TBoxComponent,
+        PartnerChannelComponent,
+        ImageDialogComponent,
+        UploadImageComponent,
+        UploadVideoComponent,
+        UploadAudioComponent,
+        UploadDocsComponent,
+        UploadCameraComponent,
+        AudioPageComponent,
+        BookPageComponent,
+        PlaylistPageComponent,
+        VideoPageComponent,
+        ImagePageComponent,
+        BottomNavigationComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        //Material
+        MatSnackBarModule,
+        MatTabsModule,
+        MatTooltipModule,
+        //AngularFireModule.initializeApp(environment.firebase),
+        //AngularFireAuthModule,
+        MatToolbarModule,
+        MatProgressBarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatDialogModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatTabsModule,
+        MatMenuModule,
+        MatSidenavModule,
+        MatSelectModule,
+        MatListModule,
+        MatCardModule,
+        MatButtonToggleModule,
+        MatGridListModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        MatTableModule,
+        MatChipsModule,
+        MatSortModule,
+        ChartModule,
+        MatPaginatorModule,
+        WebcamModule,
+        // ServiceWorkerModule.register('ngsw-worker.js', {
+        //   enabled: environment.production,
+        //   // Register the ServiceWorker as soon as the app is stable
+        //   // or after 30 seconds (whichever comes first).
+        //   registrationStrategy: 'registerWhenStable:30000'
+        // })
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 
