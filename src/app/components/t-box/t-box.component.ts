@@ -52,12 +52,12 @@ export class TBoxComponent implements OnInit, AfterViewInit {
 
 
   channels = [
-    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/zee5.png', imgtitle: 'Zee5', pagelink: 'partner-channel' },
-    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/prime_video.jpg', imgtitle: 'Prime Video', pagelink: 'partner-channel' },
-    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/voot.webp', imgtitle: 'Voot', pagelink: 'partner-channel' },
-    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/spotify.png', imgtitle: 'Spotify', pagelink: 'partner-channel' },
-    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/media_group.png', imgtitle: 'Media Group', pagelink: 'partner-channel' },
-    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/hotstar.jpg', imgtitle: 'Hotstar', pagelink: 'partner-channel' },
+    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/zee5.png', imgtitle: 'Zee5', pagelink: 'partner-channel', channelName:'Lorem Ipsum is simply dummy text' },
+    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/prime_video.jpg', imgtitle: 'Prime Video', pagelink: 'partner-channel', channelName:'Lorem Ipsum is simply dummy text' },
+    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/voot.webp', imgtitle: 'Voot', pagelink: 'partner-channel', channelName:'Lorem Ipsum is simply dummy text' },
+    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/spotify.png', imgtitle: 'Spotify', pagelink: 'partner-channel', channelName:'Lorem Ipsum is simply dummy text' },
+    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/media_group.png', imgtitle: 'Media Group', pagelink: 'partner-channel', channelName:'Lorem Ipsum is simply dummy text' },
+    { imgsrc: 'https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partners/hotstar.jpg', imgtitle: 'Hotstar', pagelink: 'partner-channel', channelName:'Lorem Ipsum is simply dummy text' },
   ];
 
 

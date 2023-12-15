@@ -28,7 +28,7 @@
                             <p class="views">101k views</p>
                         </div>
                         <div class="video-container">
-                            <video controls>
+                            <video controls playsinline>
                               <source [src]="videoSource" type="video/mp4">
                               Your browser does not support the video tag.
                             </video>
@@ -62,19 +62,68 @@
                                         <button mat-menu-item>Settings</button>
                                         <button mat-menu-item>Help</button>
                                         <button mat-menu-item>Invertebrates</button>
-                                      </mat-menu>
+                                    </mat-menu>
                                 </li>
                             </ul>
                             
-                            <div class="add_comment_wrapper" *ngIf="showAddCmnt">
-                                <textarea id="comment" placeholder="Write a comment"></textarea>
-                                <button mat-flat-button>Add Comment</button>
+                            <div class="show_commnt_wrapper" *ngIf="showAddCmnt">
+                                <div class="add_cmt_full_btn">
+                                    <button mat-flat-button (click)="toggleAddCmnt()">Add Comment</button>
+                                </div>
+                                <div class="add_comment_wrapper" *ngIf="AddCmnt">
+                                    <textarea id="comment" placeholder="Write a comment"></textarea>
+                                    <button mat-flat-button>Add Comment</button>
+                                </div>
+                                
+                                <ul class="comments">
+                                    <li class="comment-item" *ngFor="let comment of comments">
+                                        <div class="comment-item-wrap">
+                                            <div class="user-profile">
+                                                <img src="{{ comment.user_prof }}" alt="User profile" />
+                                            </div>
+                                            <div class="comment-details">
+                                                <p class="user-name">{{ comment.username }}</p>
+                                                <p class="main-comment">{{ comment.comment }}</p>
+                                            </div>
+                                            <div class="comment-options">
+                                                <p class="postedat">{{ comment.postedat }} ago</p>
+                                                <button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+                                                <mat-menu #menu="matMenu" yPosition="above">
+                                                    <button mat-menu-item (click)="toggleItem(comment.id)">Reply</button>
+                                                </mat-menu>
+                                            </div>
+                                        </div>
+                                        <div class="add_comment_wrapper" *ngIf="itemStates[comment.id]">
+                                            <textarea id="comment" placeholder="Write a comment"></textarea>
+                                            <button mat-flat-button>Add Comment</button>
+                                        </div>
+                                        <ul class="replies_list">
+                                            <li class="comment-item" *ngFor="let reply of comment.replies">
+                                                <div class="comment-item-wrap">
+                                                    <div class="user-profile">
+                                                        <img src="{{ reply.user_prof }}" alt="User profile" />
+                                                    </div>
+                                                    <div class="comment-details">
+                                                        <p class="user-name">{{ reply.username }}</p>
+                                                        <p class="main-comment">{{ reply.comment }}</p>
+                                                    </div>
+                                                    <div class="comment-options">
+                                                        <p class="postedat">{{ reply.postedat }} ago</p>
+                                                        <button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+                                                        <mat-menu #menu="matMenu" yPosition="above">
+                                                            <button mat-menu-item (click)="toggleReplyItem(reply.id)">Reply</button>
+                                                        </mat-menu>
+                                                    </div>
+                                                </div>
+                                                <div class="add_comment_wrapper" *ngIf="itemReplyStates[reply.id]">
+                                                    <textarea id="comment" placeholder="Write a comment"></textarea>
+                                                    <button mat-flat-button>Add Comment</button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
-                            
-                            <ul class="comments">
-                                <li>- Kishor Kumar</li>
-                                <li>- Nice song</li>
-                            </ul>
                         </div>
                     </div>
                 </div>

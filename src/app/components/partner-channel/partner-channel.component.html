@@ -1,4 +1,19 @@
 <div>
+    <div class="partner_inner_header">
+        <div class="inner_header_left">
+            <button (click)="backtopage()"><mat-icon>keyboard_backspace</mat-icon></button>
+            <p>McDonalds</p>
+        </div>
+        <div class="inner_header_right">
+            <button ><mat-icon>search</mat-icon></button>
+            <button [matMenuTriggerFor]="menu"><mat-icon>share</mat-icon></button>
+            <mat-menu #menu="matMenu" yPosition="above">
+                <button mat-menu-item>Report</button>
+                <button mat-menu-item>Help</button>
+                <button mat-menu-item>Invertebrates</button>
+            </mat-menu>
+        </div>
+    </div>
     <div class="banner_tbox">
         <img src="https://webdevfolio.com/edreamz_projects/youtubeClone/assets/partner-channel/partner-channel-banner.png" alt="Partner Banner" />
     </div>

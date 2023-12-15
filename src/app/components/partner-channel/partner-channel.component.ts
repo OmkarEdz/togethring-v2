@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ImageDialogComponent } from '../image-dialog/image-dialog.component';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-partner-channel',
@@ -8,6 +9,8 @@ import { ImageDialogComponent } from '../image-dialog/image-dialog.component';
   styleUrls: ['./partner-channel.component.scss']
 })
 export class PartnerChannelComponent implements OnInit {
+
+  
 
   /* code for Follow-Following button start here */
   buttonText = 'Follow';
@@ -44,7 +47,12 @@ export class PartnerChannelComponent implements OnInit {
   ];
 
   @Input() images: any[] = [];
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private location: Location) {}
+
+  backtopage() {
+    this.location.back();
+  }
+
   openPopup(slide: { imgsrc: string }): void {
     this.dialog.open(ImageDialogComponent, {
       data: { slide },

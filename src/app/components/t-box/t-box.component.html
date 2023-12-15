@@ -61,6 +61,7 @@
                 <li *ngFor="let item of channels">
                     <a href="{{ item.pagelink}}" class="partner_item">
                         <img src="{{ item.imgsrc }}" alt="{{ item.imgtitle}}" />
+                        <p>{{ item.channelName }}</p>
                     </a> 
                 </li>
             </ul>

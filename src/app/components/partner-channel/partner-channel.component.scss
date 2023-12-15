@@ -1,3 +1,33 @@
+.partner_inner_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+
+    button {
+        margin: 0px;
+        background: transparent;
+        border:0px;
+
+        .mat-icon {
+            height: 30px;
+            width: 30px;
+            font-size: 30px;
+        }
+    }
+
+    .inner_header_left {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin: 0px 0px 0px 20px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: Outfit,sans-serif;
+        }
+    }
+}
 .banner_tbox {
     max-height: 300px;
     overflow: hidden;
