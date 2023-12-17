@@ -26,45 +26,18 @@
                 <mat-icon matPrefix>search</mat-icon>
             </mat-form-field>
         </form>
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon style=" margin-right: 40px;" aria-hidden="false" aria-label="video_call">video_call</mat-icon>
+    <button mat-icon-button aria-label="Example icon-button with a menu">
+        <mat-icon aria-hidden="false" aria-label="video_call">video_call</mat-icon>
     </button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-            <mat-icon>live_tv</mat-icon>
-            <span>Upload Video</span>
-        </button>
-        <button mat-menu-item>
-            <mat-icon>rss_feed</mat-icon>
-            <span>Live</span>
-        </button>
-    </mat-menu>
-
-
-    <button mat-icon-button [matMenuTriggerFor]="menu123" aria-label="Example icon-button with a menu">
-        <mat-icon style=" margin-right: 40px;" aria-hidden="false" aria-label="view_comfy">view_comfy</mat-icon>
+    
+    <button mat-icon-button aria-label="Example icon-button with a menu">
+        <mat-icon aria-hidden="false" aria-label="view_comfy">view_comfy</mat-icon>
     </button>
-    <mat-menu #menu123="matMenu">
-        <button mat-menu-item>
-            <mat-icon>comment</mat-icon>
-            <span>Comment</span>
-        </button>
-    </mat-menu>
-
-    <button mat-icon-button [matMenuTriggerFor]="menu123456" aria-label="Example icon-button with a menu">
-        <mat-icon style=" margin-right: 40px;" aria-hidden="false" aria-label="notifications_none">notifications_none
+    
+    <button mat-icon-button aria-label="Example icon-button with a menu">
+        <mat-icon aria-hidden="false" aria-label="notifications_none">notifications_none
         </mat-icon>
     </button>
-    <mat-menu #menu123456="matMenu">
-        <button mat-menu-item>
-            <mat-icon>verified</mat-icon>
-            <span>Admin</span>
-        </button>
-        <button mat-menu-item>
-            <mat-icon>shop</mat-icon>
-            <span>Notification</span>
-        </button>
-    </mat-menu>
 
     <!-- <img [matMenuTriggerFor]="menu0" *ngIf="authService.user != null " src="{{authService.user.photoURL}}"
         style="width: 50px; height: 50x; border-radius: 50%;">
@@ -74,23 +47,7 @@
         <button mat-button (click)="openDialog()">Login</button>
     </div> -->
     <div class="persona">
-        <button mat-icon-button [matMenuTriggerFor]="section_menu"><mat-icon>account_circle</mat-icon></button>
-        <mat-menu #section_menu="matMenu" class="section_menu">
-            <h4>Videos</h4>
-            <button mat-menu-item><span>Uploads</span></button>
-            <button mat-menu-item><span>Popular Uploads</span></button>
-            <h4>Short videos</h4>
-            <button mat-menu-item><span>Live Now</span></button>
-            <button mat-menu-item><span>Past live streams</span></button>
-            <button mat-menu-item><span>Upcoming live streams</span></button>
-            <h4>Playlists</h4>
-            <button mat-menu-item><span>Single Playlists</span></button>
-            <button mat-menu-item><span>Created Playlists</span></button>
-            <button mat-menu-item><span>Multiple Playlists</span></button>
-            <h4>Channel</h4>
-            <button mat-menu-item><span>Subscription</span></button>
-            <button mat-menu-item><span>Featured channels</span></button>
-        </mat-menu>
+        <button mat-icon-button><mat-icon>account_circle</mat-icon></button>
     </div>
     <!-- <mat-menu #menu0="matMenu">
         <button *ngIf="authService.user != null" mat-menu-item>

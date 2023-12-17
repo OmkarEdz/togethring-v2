@@ -1,4 +1,5 @@
 .banner_tbox {
+    margin-top: 64px;
     img {
         width: 100%;
         height: 100%;
@@ -81,6 +82,13 @@
         @media screen and (max-width:768px) {
             bottom: -25px;
         }
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-top: 70px;
+    }
+    @media screen and (max-width: 576px) {
+        margin-top: 60px;
     }
 }
 .t-box-inner {

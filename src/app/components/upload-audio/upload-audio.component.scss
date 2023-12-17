@@ -9,10 +9,10 @@
             display: flex;
             align-items: center;
             width: 100%;
-            justify-content: space-between;
+            justify-content: space-between;position:relative;
 
             .popup_heading {
-                margin-bottom: 0px;
+                margin: 0px;
                 font-weight: 600;
             }
 
@@ -20,7 +20,11 @@
                 padding:0px 8px;
                 min-width: 35px;
                 margin-right:-8px;
-                text-align: right;
+                text-align: right;background: transparent;
+
+&:hover {
+background: #cccccc;
+}
 
                 @media screen and (max-width: 600px) {
                     padding:0px 5px;
@@ -98,7 +102,8 @@
             justify-content: center;
 
             button {
-                margin: 0 10px 10px;
+                margin: 0 10px;
+                font-weight:600;
             }
 
             .cancel_btn {
