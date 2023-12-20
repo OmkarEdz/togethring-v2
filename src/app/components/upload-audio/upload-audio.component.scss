@@ -20,11 +20,12 @@
                 padding:0px 8px;
                 min-width: 35px;
                 margin-right:-8px;
-                text-align: right;background: transparent;
+                text-align: right;
+                background: transparent;
 
-&:hover {
-background: #cccccc;
-}
+                &:hover {
+                    background: #cccccc;
+                }
 
                 @media screen and (max-width: 600px) {
                     padding:0px 5px;

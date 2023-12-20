@@ -1,6 +1,6 @@
 .audio_pg_wrapper {
     padding: 0em 12px;
-    margin:auto;
+    margin:auto;margin-top: 64px;
 
     .audio_pg_inner_wrap {
         background: rgb(247,247,247);
@@ -430,10 +430,12 @@
 
     @media screen and (max-width:768px) {
         padding-bottom: 65px;
+        margin-top: 70px;
     }
 
     @media screen and (max-width:576px) {
         padding: 0 0 65px;
         max-width: 100%;
+        margin-top: 60px;
     }
 }
