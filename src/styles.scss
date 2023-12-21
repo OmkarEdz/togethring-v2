@@ -116,7 +116,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     }
   }
 }
-
+.cdk-overlay-container {
+  z-index:9999 !important;
+}
 .mat-dialog-container {
   overflow:hidden !important;
   background: #fff;
